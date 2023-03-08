@@ -8,6 +8,9 @@
 </head>
 <body>
     <h1>Lista de alumnos</h1>
+    @if(Session::has('exito'))
+        <p>{{Session::get('exito')}}</p>
+    @endif
     <a href="{{route('alumnos.create')}}">Crear alumno</a>
     <table>
         <thead>

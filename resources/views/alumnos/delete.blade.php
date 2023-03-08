@@ -9,7 +9,7 @@
 <body>
     <h1>Eliminar alumno</h1>
     <p>Esta seguro de eliminar a <strong>{{$alumno->nombre}}</strong></p>
-    <form action="">
+    <form action="{{route('alumnos.destroy',$alumno->id)}}" method="POST">
         @csrf
         @method('delete')
         <button type="submit">Si</button>
