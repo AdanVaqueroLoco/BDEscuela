@@ -51,6 +51,13 @@ class AlumnosController extends Controller
             ->with('exito','El alumno se ha actualizado exitosamente');
     }
 
+    public function delete($id){
+        $alumno = Alumno::find($id);
 
+        $argumentos = array();
+        $argumentos['alumno'] = $alumno;
+
+        return view('alumnos.delete',$argumentos);
+    }
 
 }
